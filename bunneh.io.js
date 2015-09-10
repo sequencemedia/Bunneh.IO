@@ -20,11 +20,11 @@
 			Parent.call(this);
 		}
 		function child(Parent) {
-			var surrogate = new Parent;
+			var orphan = new Parent;
 			function Trap() {
 				trap.call(this);
 			}
-			Trap.prototype = surrogate;
+			Trap.prototype = orphan;
 			Trap.inherit = (function (Parent, parentParameters) {
 				return function (parameters) {
 					return child.call(this, Parent, bunneh.mix(parentParameters, parameters));
@@ -55,11 +55,11 @@
 			Parent.call(this);
 		}
 		function child(Parent) {
-			var surrogate = new Parent;
+			var orphan = new Parent;
 			function Stew() {
 				stew.call(this);
 			}
-			Stew.prototype = surrogate;
+			Stew.prototype = orphan;
 			Stew.inherit = (function (Parent, parentParameters) {
 				return function (parameters) {
 					return child.call(this, Parent, bunneh.mix(parentParameters, parameters));
