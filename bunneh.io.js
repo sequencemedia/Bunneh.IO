@@ -17,7 +17,7 @@
 
 	Trap.inherit = (function (Parent) {
 		function trap() {
-			Parent.call(this); //this.constructor.call(this);
+			Parent.call(this);
 		}
 		function child(Parent) {
 			var surrogate = new Parent;
@@ -52,7 +52,7 @@
 	};
 	Stew.inherit = (function (Parent) {
 		function stew() {
-			Parent.call(this); //this.constructor.call(this);
+			Parent.call(this);
 		}
 		function child(Parent) {
 			var surrogate = new Parent;
