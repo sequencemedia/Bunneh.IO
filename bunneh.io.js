@@ -8,7 +8,7 @@
 		var self = this;
 		this.capture = function () {
 			return new Promise(function (success, failure) {
-				bunneh.trap(self).run(it, here, function then(it, here) { console.log('THEN');
+				bunneh.trap(self).run(it, here, function then(it, here) {
 					success(self);
 				});
 			});
