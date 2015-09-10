@@ -1,0 +1,18 @@
+{
+  "name": "bunneh.io",
+  "version": "1.0.0",
+  "description": "Bunneh for Rabbit",
+  "main": "bunneh.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Bunneh",
+    "Rabbit"
+  ],
+  "author": "Jonathan Perry",
+  "license": "MIT",
+  "dependencies": {
+    "amqplib": "^0.3.2"
+  }
+}
