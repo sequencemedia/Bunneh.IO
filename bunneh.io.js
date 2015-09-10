@@ -8,7 +8,7 @@
 		var self = this;
 		this.capture = function () {
 			return new Promise(function (success, failure) {
-				bunneh.trap(self).run(it, here, function then(it, here) {
+				bunneh.trap(self).run(it, here, function release(it, here) {
 					success(self);
 				});
 			});
@@ -41,7 +41,7 @@
 		var self = this;
 		this.prepare = function () {
 			return new Promise(function (success, failure) {
-				bunneh.stew(self).eat(it, here, function then(it, here) {
+				bunneh.stew(self).eat(it, here, function consume(it, here) {
 					success(self);
 				});
 			});
