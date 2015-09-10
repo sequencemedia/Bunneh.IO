@@ -9,6 +9,9 @@
 		this.capture = function () {
 			return new Promise(function (success, failure) {
 				bunneh.trap(self).run(it, here, function release(it, here) {
+					/*
+						bunneh can call out here. otherwise
+					*/
 					success(self);
 				});
 			});
@@ -25,9 +28,9 @@
 				trap.call(this);
 			}
 			Trap.prototype = orphan;
-			Trap.inherit = (function (Parent, parentParameters) {
+			Trap.inherit = (function (Parent, parent) { //Parent constructor, parent parameters
 				return function (parameters) {
-					return child.call(this, Parent, bunneh.mix(parentParameters, parameters));
+					return child.call(this, Parent, bunneh.mix(parent, parameters));
 				}
 			}(Trap));
 			return Trap;
@@ -42,6 +45,9 @@
 		this.prepare = function () {
 			return new Promise(function (success, failure) {
 				bunneh.stew(self).eat(it, here, function consume(it, here) {
+					/*
+						bunneh can call out here. otherwise
+					*/
 					success(self);
 				});
 			});
@@ -60,9 +66,9 @@
 				stew.call(this);
 			}
 			Stew.prototype = orphan;
-			Stew.inherit = (function (Parent, parentParameters) {
+			Stew.inherit = (function (Parent, parent) { //Parent constructor, parent parameters
 				return function (parameters) {
-					return child.call(this, Parent, bunneh.mix(parentParameters, parameters));
+					return child.call(this, Parent, bunneh.mix(parent, parameters));
 				}
 			}(Stew));
 			return Stew;
