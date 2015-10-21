@@ -2,6 +2,12 @@
 
 	'use strict';
 
+	/*
+		Bunneh.IO
+		is a moderately bonkers lightweight API for intercepting WebSockets events in Peace.IO
+		and routing them to or consuming them in RabbitMQ
+	*/
+
 	var bunneh = require('./bunneh');
 
 	function Trap(it, here) {
